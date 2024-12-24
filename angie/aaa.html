@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="aaa.css">
+    <link rel="icon" href="imagen/logo.jpeg" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" id="favicon">
+    <title>GRAPE ENTRY PROGRAM</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2 style="color: red; font-size: 34px; font-weight: bold; font-style: italic;">  INGRESO DE UVA  </h2>    
+            <form id="ingreso-form">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="mes">MES:</label>
+                        <input type="text" id="mes" placeholder="Escriba el mes" />
+                    </div>
+                    <div class="input-group">
+                        <label for="meta">META(kg):</label>
+                        <input type="text" id="meta" />
+                    </div>
+                    <div class="input-group">
+                        <label for="fecha-inicio"> FECHA DESDE :</label>
+                        <input type="date" id="fecha-inicio" />
+                    </div>
+                    <div class="input-group">
+                        <label for="fecha-fin"> FECHA HASTA:</label>
+                        <input type="date" id="fecha-fin" />
+                    </div>
+                    <div class="input-group">
+                        <label for="fecha-uva">FECHA:</label>
+                        <input type="date" id="fecha-uva" />
+                    </div>
+                    <div class="input-group">
+                        <label for="variedad">VARIEDAD:</label>
+                        <input type="text" id="variedad" />
+                    </div>
+                    <div class="input-group">
+                        <label for="lote">LOTE:</label>
+                        <input type="text" id="lote" />
+                    </div>
+                    <div class="input-group">
+                        <label for="ticket">NUMERO DE TICKET:</label>
+                        <input type="text" id="ticket" />
+                    </div>
+                    <div class="input-group">
+                        <label for="condicion ">CONDICION:</label>
+                        <select id="condicion">
+                            <option value="Aceptable">Aceptable</option>
+                            <option value="No Aceptable">No Aceptable</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="peso-entrada">PESO DE ENTRADA(kg):</label>
+                        <input type="text" id="peso-entrada" />
+                    </div>
+                    <div class="input-group">
+                        <label for="proveedor">PROVEEDOR:</label>
+                        <input type="text" id="proveedor" />
+                    </div>
+                    <div class="input-group">
+                        <label for="placa">PLACA:</label>
+                        <input type="text" id="placa" />
+                    </div>
+                    <div class="input-group">
+                        <label for="peso-bruto">PESO BRUTO (kg):</label>
+                        <input type="text" id="peso-bruto" />
+                    </div>
+                    <div class="input-group">
+                        <label for="peso-tara">PESO TARA (kg):</label>
+                        <input type="text" id="peso-tara" />
+                    </div>
+                    <div class="input-group">
+                        <label for="campo">CAMPO:</label>
+                        <input type="text" id="campo" />
+                    </div>
+                    <div class="input-group">
+                        <label for="observacion">OBSERVACION:</label>
+                        <input type="text" id="observacion" />
+                    </div>
+                    <div class="input-group">
+                        <label for="estado">ESTADO:</label>
+                        <input type="text" id="estado" />
+                    </div>
+                    <div class="input-group">
+                        <label for="grado">GRADO ALCOHOLICO:</label>
+                        <input type="text" id="grado" />
+                    </div>
+                    <div class="input-group">
+                        <label for="alcohol">AV:</label>
+                        <input type="text" id="alcohol" />
+                    </div>
+                    <div class="input-group">
+                        <label for="empresa">Empresa:</label>
+                        <select id="empresa">
+                            <option value="VIÑA VIEJA">VIÑA VIEJA</option>
+                            <option value="EVC">EVC</option>
+                            <option value="LOURDES">LOURDES</option>
+                            <option value="FINCA ROTONDO">FINCA ROTONDO</option>
+                            <option value="INMOBILIARIA">INMOBILIARIA</option>
+                            <option value="DESTILERIA NACIONAL">DESTILERIA NACIONAL</option>
+                            <option value="MONTESIERPE">MONTESIERPE</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="stock-tanque">STOCK DE TANQUE:</label>
+                        <input type="text" id="stock-tanque" />
+                    </div>
+                    <div class="input-group">
+                        <label for="condicion-final">CONDICION FINAL:</label>
+                        <input type="text" id="condicion-final" />
+                    </div>
+                    <div class="input-group">
+                        <label for="tipo-uva">UVA PARA:</label>
+                        <select id="tipo-uva">
+                            <option value="Italia - Pisco">Italia - Pisco</option>
+                            <option value="Italia - Vino">Italia - Vino</option>
+                            <option value="NC3 - Vino">NC3 - Vino</option>
+                            <option value="NC3 - Pisco">NC3 - Pisco</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="guardar-btn">GUARDAR</button>
+                    <button type="button" id="calcular-btn">CALCULAR</button>
+                    <button type="button" id="terminado-btn">CULMINACION</button>
+                    <button type="button" id="imprimir-btn">IMPRIMIR</button>
+                    <button type="button" id="pdf-btn">GENERAR EXCEL</button>
+                </div>
+            </form>
+        </div>
+        <center>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar por tipo de uva..." />
+        </div></center>
+        <div id="meta-info">
+            <h3 id="meta-titulo"></h3>
+            <br>
+            <h4 id="fecha-titulo"></h4>
+        </div>
+        <div class="table-container">
+            <table id="ingreso-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Variedad</th>
+                        <th>Lote</th>
+                        <th>Ticket</th>
+                        <th>Peso Entrada</th>
+                        <th>Condición</th>
+                        <th>Proveedor</th>
+                        <th>Placa</th>
+                        <th>Peso Bruto</th>
+                        <th>Peso Tara</th>
+                        <th>Campo</th>
+                        <th>Observación</th>
+                        <th>Estado</th>
+                        <th>Empresa</th>
+                        <th>Grado Alcoholico</th>
+                        <th>AV</th>
+                        <th>Stock del Tanque</th>
+                        <th>Condición Final</th>
+                        <th>Tipo de Uva</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="./aaa.js"></script>
+</body>
+</html>
